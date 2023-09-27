@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-    echo "lmao";
+    echo "lma";
     ?>
 </body>
 </html>
