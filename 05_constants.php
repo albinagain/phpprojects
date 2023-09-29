@@ -17,9 +17,9 @@
         print "<br>";
 
         //Magic Constants
-        print "Line Number: ";
         print __LINE__;
         print "<br>";
+        print __FILE__;
     ?>
 </body>
 </html>
