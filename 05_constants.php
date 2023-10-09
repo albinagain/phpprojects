@@ -16,6 +16,31 @@
         print constant("VAPOREON");
         print "<br>";
 
+        //Constants with array
+        define("SENTENCE", ["this", "is", "a", "sentence"]);
+        function sentence(){
+            //using if-else
+
+            /*STATIC $x = 0;
+            if($x == 4){
+                print "<br>";
+            }
+            else{
+                print SENTENCE[$x];
+                print " ";
+                $x++;
+            }*/
+
+            //using for
+            for($x = 0; $x < 4; $x++){
+                print SENTENCE[$x];
+                print " ";
+                if($x == 3)
+                    print "<br>";
+            }
+        }
+        sentence();
+        
         //Magic Constants
         print __LINE__;
         print "<br>";
