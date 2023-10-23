@@ -28,7 +28,7 @@
         $num1 % $num4 = $mod<br>
         $num1++ = $incr<br>
         $num2-- = $decr
-        "
+        ";
     ?>
 </body>
 </html>
