@@ -1,0 +1,54 @@
+cd..
+cd..
+cd mysql/bin
+.\mysql -u root
+
+CREATE DATABASE StudentRecord;
+
+USE StudentRecord;
+
+CREATE TABLE Student (
+    StudentID int NOT NULL,
+    FirstName varchar(255),
+    LastName varchar(255),
+    DateOfBirth date,
+    Email varchar(255),
+    Phone varchar(255),
+    PRIMARY KEY (studentID)
+);
+
+CREATE TABLE Course (
+    CourseID int NOT NULL,
+    CourseName varchar(255),
+    Credits varchar(255),
+    PRIMARY KEY (CourseID)
+);
+
+CREATE TABLE Instructor (
+    InstructorID int NOT NULL,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Email varchar(255),
+    Phone varchar(255),
+    PRIMARY KEY (InstructorID)
+);
+
+CREATE TABLE Enrollment (
+    EnrollmentID int NOT NULL,
+    StudentID int,
+    CourseID int,
+    EnrollmentDate varchar(255),
+    Grade int,
+    PRIMARY KEY (EnrollmentID),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
+
+ALTER TABLE Course
+ADD InstructorID int;
+
+ALTER TABLE Course
+ADD FOREIGN KEY (InstructorID) REFERENCES Instructor(InstructorID);
+
+ALTER TABLE Enrollment
+MODIFY COLUMN EnrollmentDate date;

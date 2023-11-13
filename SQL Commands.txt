@@ -13,7 +13,7 @@ CREATE TABLE table_name (
     column2 varchar(255) DEFAULT default_value,
     column3 text(255),
     PRIMARY KEY (column1)
-    FOREIN KEY (column_name) REFERENCES database_name(column_name)
+    FOREIGN KEY (column_name) REFERENCES database_name(column_name)
 );
 
 DROP TABLE table_name;
@@ -21,6 +21,7 @@ DROP TABLE table_name;
 ALTER TABLE table_name
 ADD column4 varchar(255);
 DROP column5;
+MODIFY COLUMN column_name datatype;
 
 INSERT INTO table_name (column2, column3)
 VALUES (value2, value3),
