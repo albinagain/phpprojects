@@ -20,7 +20,7 @@ CREATE TABLE Student (
 CREATE TABLE Course (
     CourseID int NOT NULL,
     CourseName varchar(255),
-    Credits varchar(255),
+    Credits int,
     PRIMARY KEY (CourseID)
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE Instructor (
     FirstName varchar(255),
     LastName varchar(255),
     Email varchar(255),
-    Phone varchar(255),
+    Phone int,
     PRIMARY KEY (InstructorID)
 );
 
@@ -44,11 +44,17 @@ CREATE TABLE Enrollment (
     FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
 
-ALTER TABLE Course
-ADD InstructorID int;
 
-ALTER TABLE Course
-ADD FOREIGN KEY (InstructorID) REFERENCES Instructor(InstructorID);
+INSERT INTO student (StudentID, FirstName, LastName, DateOfBirth, Email, Phone)
+VALUES (1, "Yew", "Wey", "2001-09-08", "ywe@email.com", 09245826142),
+(2, "Ure", "Mew", "2021-01-21", "mew@email.com", 09245826987);
 
-ALTER TABLE Enrollment
-MODIFY COLUMN EnrollmentDate date;
+INSERT INTO course (CourseID, CourseName, Credits)
+VALUES (0, "Test Course", 80),
+(1, "WIS", 80),
+(2, "Racing Course", 80);
+
+INSERT INTO instructor (InstructorID, FirstName, LastName, Email, Phone)
+VALUES (0, "TestInst", "Lastname", "email@email.com", 09123456789)
+(1, "Tam", "Lem", "lem@email.com", 09123456780)
+(0, "TestInst", "Lastname", "email@email.com", 09123456788);
