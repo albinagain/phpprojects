@@ -8,36 +8,36 @@ CREATE DATABASE StudentRecord;
 USE StudentRecord;
 
 CREATE TABLE Student (
-    StudentID int NOT NULL,
+    StudentID int NOT NULL AUTO_INCREMENT,
     FirstName varchar(255),
     LastName varchar(255),
     DateOfBirth date,
     Email varchar(255),
     Phone varchar(255),
-    PRIMARY KEY (studentID)
+    PRIMARY KEY (StudentID)
 );
 
 CREATE TABLE Course (
-    CourseID int NOT NULL,
+    CourseID int NOT NULL AUTO_INCREMENT,
     CourseName varchar(255),
     Credits int,
     PRIMARY KEY (CourseID)
 );
 
 CREATE TABLE Instructor (
-    InstructorID int NOT NULL,
+    InstructorID int NOT NULL AUTO_INCREMENT,
     FirstName varchar(255),
     LastName varchar(255),
     Email varchar(255),
-    Phone int,
+    Phone varchar(255),
     PRIMARY KEY (InstructorID)
 );
 
 CREATE TABLE Enrollment (
-    EnrollmentID int NOT NULL,
+    EnrollmentID int NOT NULL AUTO_INCREMENT,
     StudentID int,
     CourseID int,
-    EnrollmentDate varchar(255),
+    EnrollmentDate date,
     Grade int,
     PRIMARY KEY (EnrollmentID),
     FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
@@ -45,16 +45,22 @@ CREATE TABLE Enrollment (
 );
 
 
-INSERT INTO student (StudentID, FirstName, LastName, DateOfBirth, Email, Phone)
-VALUES (1, "Yew", "Wey", "2001-09-08", "ywe@email.com", 09245826142),
-(2, "Ure", "Mew", "2021-01-21", "mew@email.com", 09245826987);
+INSERT INTO student (FirstName, LastName, DateOfBirth, Email, Phone)
+VALUES ("Yew", "Wey", "2001-09-08", "ywe@email.com", "09245826142"),
+("Ure", "Mew", "2021-01-21", "mew@email.com", "09245826987"),
+("Mano", "Wer", "1999-05-08", "mple@email.com", "09245826986");
 
-INSERT INTO course (CourseID, CourseName, Credits)
-VALUES (0, "Test Course", 80),
-(1, "WIS", 80),
-(2, "Racing Course", 80);
+INSERT INTO course (CourseName, Credits)
+VALUES ("Test Course", 80),
+("WIS", 80),
+("Racing Course", 80);
 
-INSERT INTO instructor (InstructorID, FirstName, LastName, Email, Phone)
-VALUES (0, "TestInst", "Lastname", "email@email.com", 09123456789)
-(1, "Tam", "Lem", "lem@email.com", 09123456780)
-(0, "TestInst", "Lastname", "email@email.com", 09123456788);
+INSERT INTO instructor (FirstName, LastName, Email, Phone)
+VALUES ("TestInst", "Lastname", "email@email.com", "09123456789"),
+("Tam", "Lem", "lem@email.com", "09123456780"),
+("Instlo", "Holo", "emil@email.com", "09123456788");
+
+INSERT INTO Enrollment (StudentID, CourseID, EnrollmentDate, Grade)
+VALUES (1, 1, "2023-11-21", 75),
+(2, 2, "2023-11-21", 85),
+(3, 2, "2023-11-21", 95);
