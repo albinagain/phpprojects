@@ -1,27 +1,36 @@
-<?php
-    //Open in terminal
-    calculate:
-    $a = (int)readline("Enter First Integer: ");
-    $b = (int)readline("Enter Second Integer: ");
-
-    operate:
-    $operator = readline("Enter Operation (add, sub, multi, div, mod): ");
-
-    if ($operator == "add") {$c = $a + $b;}
-    else if ($operator == "sub") {$c = $a - $b;}
-    else if ($operator == "multi") {$c = $a * $b;}
-    else if ($operator == "div") {$c = $a / $b;}
-    else if ($operator == "mod") {$c = $a % $b;}
-    else {goto operate;}
-
-    echo $c;
-    echo "<br>";
-    repeat:
-    $repeat = readline("Again? (y/n): ");
-    if ($repeat == "y") {goto calculate;}
-    else if ($repeat == "n") {goto end;}
-    else {goto repeat;}
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show/Hide Form</title>
+    <style>
+        /* Initially hide the form */
+        #myForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleForm()">Show Form</button>
     
-    end:
-?>
+    <form id="myForm" method="post" action="add_entity.php">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="submit" name="student_add" value="Add Student">
+    </form>
+
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("myForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>
