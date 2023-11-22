@@ -21,6 +21,14 @@
         }
     ?>
 
+    <div class="container">
+        <form action="search.php" method="GET">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
     <!-- Student Table  -->
 
     <div class="container">
@@ -56,6 +64,7 @@
         <button onclick="toggleFormStudent()">Add</button>
     
         <form id="StudentForm" method="post" action="add_entity.php">
+            <h4>Add Student</h4>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
             <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
@@ -108,6 +117,7 @@
         <button onclick="toggleFormCourse()">Add</button>
     
         <form id="CourseForm" method="post" action="add_entity.php">
+            <h4>Add Course</h4>
             <input type="text" name="course_name" placeholder="Course Name" required>
             <input type="text" name="credits" placeholder="Credits" required>
             <input type="submit" name="course_add" value="Add Course">
@@ -162,6 +172,7 @@
         <button onclick="toggleFormInstructor()">Add</button>
     
         <form id="InstructorForm" method="post" action="add_entity.php">
+            <h4>Add Instructor</h4>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
             <input type="text" name="email" placeholder="Email" required>
@@ -218,6 +229,7 @@
         <button onclick="toggleFormEnrollment()">Add</button>
     
         <form id="EnrollmentForm" method="post" action="add_entity.php">
+            <h4>Add Enrollment</h4>
             <input type="text" name="student_id" placeholder="Student ID" required>
             <input type="text" name="course_id" placeholder="Course ID" required>
             <input type="date" name="enrollment_date" placeholder="Enrollment Date" required>

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search</title>
 </head>
 <body>
-    <script>
-        Toastify({
-            text: "This is a toast notification!",
-            duration: 3000 // 3 seconds
-        }).showToast();
-    </script>
+    <form action="search.php" method="GET">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
