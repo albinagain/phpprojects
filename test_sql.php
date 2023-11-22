@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL Connect</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        #StudentForm {
-            display: none;
-        }
-        #CourseForm {
-            display: none;
-        }
-        #InstructorForm {
-            display: none;
-        }
-        #EnrollmentForm {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <?php
@@ -225,7 +212,6 @@
                 else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
-                $conn->close();
             ?>
         </table>
 
@@ -251,6 +237,9 @@
 
         </script>
     </div>
+    <?php
+        $conn->close(); 
+    ?>
     
 </body>
 </html>

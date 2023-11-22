@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5;test_sql.php">
+    <meta http-equiv="refresh" content="3;test_sql.php">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Entity Added</title>
+    <title>Edited Table</title>
 </head>
 <body>
     <?php
