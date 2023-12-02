@@ -17,7 +17,7 @@
 <body>
     <div class="button-row">
         <button onclick="toggleForm()">Show Form</button>
-        <button onclick="toggleForm1()">Show Form</button>
+        <button onclick="toggleForm1()">Show Form1</button>
     </div>
     
     
@@ -41,19 +41,23 @@
     <script>
         function toggleForm() {
             var form = document.getElementById("myForm");
+            var form1 = document.getElementById("myForm1");
             if (form.style.display === "none") {
                 form.style.display = "block";
+                form1.style.display = "none";
             } else {
                 form.style.display = "none";
             }
         }
 
         function toggleForm1() {
-            var form = document.getElementById("myForm1");
-            if (form.style.display === "none") {
-                form.style.display = "block";
-            } else {
+            var form = document.getElementById("myForm");
+            var form1 = document.getElementById("myForm1");
+            if (form1.style.display === "none") {
                 form.style.display = "none";
+                form1.style.display = "block";
+            } else {
+                form1.style.display = "none";
             }
         }
 

@@ -61,9 +61,9 @@
                 }
             ?>
         </table>
-        <button onclick="toggleFormStudent()">Add</button>
+        <button onclick="toggleFormStudentCreate()">Add</button>
     
-        <form id="StudentForm" method="post" action="add_entity.php">
+        <form id="StudentFormCreate" method="post" action="add_entity.php">
             <h4>Add Student</h4>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
@@ -73,9 +73,15 @@
             <input type="submit" name="student_add" value="Add Student">
         </form>
 
+        <form id="StudentFormDelete" method="post" action="delete_entity.php">
+            <h4>Delete Student</h4>
+            <input type="text" name="id" placeholder="Student ID" required>
+            <input type="submit" name="student_delete" value="Delete Student">
+        </form>
+
         <script>
-            function toggleFormStudent() {
-                var form = document.getElementById("StudentForm");
+            function toggleFormStudentCreate() {
+                var form = document.getElementById("StudentFormCreate");
                 if (form.style.display === "none") {
                     form.style.display = "block";
                 } else {
@@ -116,16 +122,22 @@
 
         <button onclick="toggleFormCourse()">Add</button>
     
-        <form id="CourseForm" method="post" action="add_entity.php">
+        <form id="CourseFormCreate" method="post" action="add_entity.php">
             <h4>Add Course</h4>
             <input type="text" name="course_name" placeholder="Course Name" required>
             <input type="text" name="credits" placeholder="Credits" required>
             <input type="submit" name="course_add" value="Add Course">
         </form>
 
+        <form id="CourseFormDelete" method="post" action="delete_entity.php">
+            <h4>Delete Course</h4>
+            <input type="text" name="id" placeholder="Course ID" required>
+            <input type="submit" name="course_delete" value="Delete Course">
+        </form>
+
         <script>
             function toggleFormCourse() {
-                var form = document.getElementById("CourseForm");
+                var form = document.getElementById("CourseFormCreate");
                 if (form.style.display === "none") {
                     form.style.display = "block";
                 } else {
@@ -171,7 +183,7 @@
 
         <button onclick="toggleFormInstructor()">Add</button>
     
-        <form id="InstructorForm" method="post" action="add_entity.php">
+        <form id="InstructorFormCreate" method="post" action="add_entity.php">
             <h4>Add Instructor</h4>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
@@ -180,9 +192,15 @@
             <input type="submit" name="instructor_add" value="Add Instructor">
         </form>
 
+        <form id="InstructorFormDelete" method="post" action="delete_entity.php">
+            <h4>Delete Instructor</h4>
+            <input type="text" name="id" placeholder="Instructor ID" required>
+            <input type="submit" name="instructor_delete" value="Delete Instructor">
+        </form>
+
         <script>
             function toggleFormInstructor() {
-                var form = document.getElementById("InstructorForm");
+                var form = document.getElementById("InstructorFormCreate");
                 if (form.style.display === "none") {
                     form.style.display = "block";
                 } else {
@@ -228,7 +246,7 @@
 
         <button onclick="toggleFormEnrollment()">Add</button>
     
-        <form id="EnrollmentForm" method="post" action="add_entity.php">
+        <form id="EnrollmentFormCreate" method="post" action="add_entity.php">
             <h4>Add Enrollment</h4>
             <input type="text" name="student_id" placeholder="Student ID" required>
             <input type="text" name="course_id" placeholder="Course ID" required>
@@ -237,9 +255,15 @@
             <input type="submit" name="enrollment_add" value="Add Enrollment">
         </form>
 
+        <form id="EnrollmentFormDelete" method="post" action="delete_entity.php">
+            <h4>Delete Enrollment</h4>
+            <input type="text" name="id" placeholder="Enrollment ID" required>
+            <input type="submit" name="enrollment_delete" value="Delete Enrollment">
+        </form>
+
         <script>
             function toggleFormEnrollment() {
-                var form = document.getElementById("EnrollmentForm");
+                var form = document.getElementById("EnrollmentFormCreate");
                 if (form.style.display === "none") {
                     form.style.display = "block";
                 } else {

@@ -1,12 +1,12 @@
-#StudentForm {
+#StudentFormCreate {
     display: none;
 }
-#CourseForm {
+#CourseFormCreate {
     display: none;
 }
-#InstructorForm {
+#InstructorFormCreate {
     display: none;
 }
-#EnrollmentForm {
+#EnrollmentFormCreate {
     display: none;
 }
