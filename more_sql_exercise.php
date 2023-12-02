@@ -65,12 +65,23 @@
     
         <form id="StudentFormCreate" method="post" action="add_entity.php">
             <h4>Add Student</h4>
-            <input type="text" name="first_name" placeholder="First Name" required>
-            <input type="text" name="last_name" placeholder="Last Name" required>
-            <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
-            <input type="text" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone" required>
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="date" name="date_of_birth" placeholder="Date of Birth">
+            <input type="text" name="email" placeholder="Email" >
+            <input type="text" name="phone" placeholder="Phone" >
             <input type="submit" name="student_add" value="Add Student">
+        </form>
+
+        <form id="StudentFormUpdate" method="post" action="update_entity.php">
+            <h4>Update Student</h4>
+            <input type="text" name="id" placeholder="Student ID" required>
+            <input type="text" name="first_name" placeholder="First Name" >
+            <input type="text" name="last_name" placeholder="Last Name" >
+            <input type="date" name="date_of_birth" placeholder="Date of Birth" >
+            <input type="text" name="email" placeholder="Email" >
+            <input type="text" name="phone" placeholder="Phone" >
+            <input type="submit" name="student_update" value="Update Student">
         </form>
 
         <form id="StudentFormDelete" method="post" action="delete_entity.php">
@@ -124,9 +135,17 @@
     
         <form id="CourseFormCreate" method="post" action="add_entity.php">
             <h4>Add Course</h4>
-            <input type="text" name="course_name" placeholder="Course Name" required>
-            <input type="text" name="credits" placeholder="Credits" required>
+            <input type="text" name="course_name" placeholder="Course Name" >
+            <input type="text" name="credits" placeholder="Credits" >
             <input type="submit" name="course_add" value="Add Course">
+        </form>
+
+        <form id="CourseFormUpdate" method="post" action="update_entity.php">
+            <h4>Update Course</h4>
+            <input type="text" name="id" placeholder="Course ID" required>
+            <input type="text" name="course_name" placeholder="Course Name" >
+            <input type="text" name="credits" placeholder="Credits" >
+            <input type="submit" name="course_update" value="Update Course">
         </form>
 
         <form id="CourseFormDelete" method="post" action="delete_entity.php">
@@ -185,11 +204,21 @@
     
         <form id="InstructorFormCreate" method="post" action="add_entity.php">
             <h4>Add Instructor</h4>
-            <input type="text" name="first_name" placeholder="First Name" required>
-            <input type="text" name="last_name" placeholder="Last Name" required>
-            <input type="text" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone" required>
+            <input type="text" name="first_name" placeholder="First Name" >
+            <input type="text" name="last_name" placeholder="Last Name" >
+            <input type="text" name="email" placeholder="Email" >
+            <input type="text" name="phone" placeholder="Phone" >
             <input type="submit" name="instructor_add" value="Add Instructor">
+        </form>
+
+        <form id="InstructorFormUpdate" method="post" action="update_entity.php">
+            <h4>Update Instructor</h4>
+            <input type="text" name="id" placeholder="Instructor ID" required>
+            <input type="text" name="first_name" placeholder="First Name" >
+            <input type="text" name="last_name" placeholder="Last Name" >
+            <input type="text" name="email" placeholder="Email" >
+            <input type="text" name="phone" placeholder="Phone" >
+            <input type="submit" name="instructor_update" value="Update Instructor">
         </form>
 
         <form id="InstructorFormDelete" method="post" action="delete_entity.php">
@@ -248,11 +277,21 @@
     
         <form id="EnrollmentFormCreate" method="post" action="add_entity.php">
             <h4>Add Enrollment</h4>
-            <input type="text" name="student_id" placeholder="Student ID" required>
-            <input type="text" name="course_id" placeholder="Course ID" required>
-            <input type="date" name="enrollment_date" placeholder="Enrollment Date" required>
+            <input type="text" name="student_id" placeholder="Student ID" >
+            <input type="text" name="course_id" placeholder="Course ID" >
+            <input type="date" name="enrollment_date" placeholder="Enrollment Date" >
             <input type="text" name="grade" placeholder="Grade">
             <input type="submit" name="enrollment_add" value="Add Enrollment">
+        </form>
+
+        <form id="EnrollmentFormUpdate" method="post" action="update_entity.php">
+            <h4>Update Enrollment</h4>
+            <input type="text" name="id" placeholder="Enrollment ID" required>
+            <input type="text" name="student_id" placeholder="Student ID" >
+            <input type="text" name="course_id" placeholder="Course ID" >
+            <input type="date" name="enrollment_date" placeholder="Enrollment Date" >
+            <input type="text" name="grade" placeholder="Grade">
+            <input type="submit" name="enrollment_update" value="Update Enrollment">
         </form>
 
         <form id="EnrollmentFormDelete" method="post" action="delete_entity.php">

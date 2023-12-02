@@ -39,7 +39,7 @@
         }
 
         // Delete Course
-        if(isset($_POST['course_delete'])) {
+        else if(isset($_POST['course_delete'])) {
             $id = $_POST['id'];
 
             $sql = "DELETE FROM Course WHERE CourseID = $id"; 
@@ -57,7 +57,7 @@
         }
 
         // Delete Instructor
-        if(isset($_POST['instructor_delete'])) {
+        else if(isset($_POST['instructor_delete'])) {
             $id = $_POST['id'];
 
             $sql = "DELETE FROM Instructor WHERE InstructorID = $id"; 
@@ -75,7 +75,7 @@
         }
 
         // Delete Enrollment
-        if(isset($_POST['enrollment_delete'])) {
+        else if(isset($_POST['enrollment_delete'])) {
             $id = $_POST['id'];
 
             $sql = "DELETE FROM Enrollment WHERE EnrollmentID = $id"; 
