@@ -167,7 +167,7 @@
             }
 
             if ($edited === 1) {
-                echo "Updated Course ID = $id";
+                echo "Updated Enrollment ID = $id";
             } else {
                 echo "Error updating entity: " . $conn->error;
             }
