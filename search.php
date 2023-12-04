@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="mb-3 mt-3">
     <?php
         $servername = "localhost";
         $username = "root";
@@ -22,11 +22,11 @@
         $searchTerm = $_GET['search'];
     ?>
 
-    <div class="container">
+    <div class="container mb-3 mt-3">
         <h1>Search Results</h1>
     </div>
 
-    <div class="container">
+    <div class="container mb-5 mt-5">
         <h2>Table: Student</h2>
         <table class="table table-striped">
         <tr>
@@ -67,7 +67,7 @@
         </table>
     </div>
     
-    <div class="container">
+    <div class="container mb-5 mt-5">
         <h2>Table: Course</h2>
         <table class="table table-striped">
         <tr>
@@ -102,7 +102,7 @@
         </table>
     </div>
 
-    <div class="container">
+    <div class="container mb-5 mt-5">
         <h2>Table: Instructor</h2>
         <table class="table table-striped">
         <tr>
@@ -140,7 +140,7 @@
         </table>
     </div>
 
-    <div class="container">
+    <div class="container mb-5 mt-5">
         <h2>Table: Enrollment</h2>
         <table class="table table-striped">
         <tr>
